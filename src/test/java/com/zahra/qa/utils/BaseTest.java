@@ -4,11 +4,14 @@ package com.zahra.qa.utils;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 
+import io.restassured.RestAssured;
+
 public class BaseTest {
 
 	@BeforeEach
 	public void setUp() {
 		// Setup code before each test
+        RestAssured.baseURI = "https://reqres.in/api";
 	}
 
 	@AfterEach
